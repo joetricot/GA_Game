@@ -1,21 +1,22 @@
-# Joe Tricot's Game
+# [Name of Game]
 
-## Technologies Used
+take screenshot
 
-- blah
+## What is [name of game]?
 
-## Approach Taken
+Brief discussion of what the game is and why you chose to make it
 
-Approach taken blah blah 
+## Techincal Discussion
 
-## Use stories
+List of the technologies you're using (HTML, CSS, JavaScript)
 
-- use stories blah blah
-    - use stories blah blah
+### Notes on Game Structure
 
-## Wireframes
+Code samples, description of challenges you overcame, etc.
 
-## How to use instructions
+## The Making of [Your Game]
 
-## Unsolved problems
+Any credits or notes you feel you should add
+
+## Opportunities for Future Growth
 

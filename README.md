@@ -6,7 +6,7 @@ take screenshot
 
 Brief discussion of what the game is and why you chose to make it
 
-## Techincal Discussion
+## Technical Discussion
 
 List of the technologies you're using (HTML, CSS, JavaScript)
 

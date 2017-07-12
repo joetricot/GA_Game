@@ -30,7 +30,7 @@ Upon the "guesses left" hitting 0, an alert will appear signifying a loss/
         - implement star wars css font
         - implement background image of space
     - creating a button "enter" and a space where the user can enter a letter
-    - creating a wrong guesses left space and a guesses left space
+    - creating a wrong guesses left container and a guesses left container
  - Phase -1
     - creating an array of possible words
     - randomizing those words and place into a function
@@ -40,10 +40,38 @@ Upon the "guesses left" hitting 0, an alert will appear signifying a loss/
         - also, decrease one from the default number of 5 near "guesses left". 
  - Phase 0
     - create a function that reads if all the letters in the word have been accurately guessed
-        - create an alert signifying a win
+        - check value of visibility properties of elements on a page
+        - loop through all letters to see if all visible
+        - easier way: each time they guess correctly, subtract letter from the total lenght. if numbers (letters remaining) = 0....create an alert signifying a win
     - create a function that reads if guesses left equals to -
         - create an alert signifying a loss
 
+## Challenges
+
+spans (give class to each span) to make letters inline 
+use css to draw thin rectangle under each letter so that's not hidden
+word on the screen - break into letters
+container per letter
+visibility property in css
+in for loop have selectors - loop through containers or divs of each letter
+
+have class for each letter
+
+split apart words from array into individual characters with string.prototype.split: 
+
+
+if letter entered equals a letter in the word
+$(.letterbox) if yes, then reveal
+
+(win condition invisible - game board dissapears...)
+
+make box bigger if longer word
+
+--
+Play the game and record step by step
+
+Have landing page?? With Star Wars crawl
+--
 
 ## Links and resources 
 

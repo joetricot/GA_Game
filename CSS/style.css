@@ -1,7 +1,80 @@
-h1 {
-  color: red;
+.intro {
+  width: 1400px;
+  height: 300px;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 600%;
+  letter-spacing: 6px;
+  text-align: center;
+  color: #feda4a;
+  font-weight: 800;
+
 }
 
-h2 {
-  color: blue;
+@keyframes intro {
+  0% {
+
+  }
+
+  50% {
+
+  }
+
+  100% {
+
+  }
+
 }
+
+body {
+  background-image: url("../assets/starfield.jpg");
+  text-align: center;
+}
+
+input[type="submit"] {
+  background: #feda4a;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border: 0;
+  font-size: 20px;
+  margin-bottom: 80px;
+}
+
+input[type="letter"] {
+  color: black;
+  font-size: 20px;
+  border: 0;
+  padding: 10px;
+  margin-bottom: 80px;
+}
+
+
+.mainbox {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 120px;
+  width: 1000px;
+  padding-left: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.smallbox {
+  width: 10%;
+  height: 5%;
+  margin-top: 90px;
+  background-color: #feda4a;
+}
+
+
+
+
+
+
+
+
+
+
+
+

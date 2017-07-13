@@ -7,6 +7,7 @@
   text-align: center;
   color: #feda4a;
   font-weight: 800;
+  margin: auto;
 
 }
 @keyframes intro {
@@ -87,8 +88,39 @@ input[type="letter"] {
 
 
 
+.guessesleft {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 63px;
+  width: 200px;
+  margin: auto;
+  color: red;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  font-size: 20px;
+  text-align: center;
+}
+.incorrectguesses {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 63px;
+  width: 400px;
+  margin: auto;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  font-size: 20px;
+  text-align: center;
+}
+#incorrect {
+  color: red;
 
-
-
-
-
+}
+#incorrectletter {
+  color: red;
+}

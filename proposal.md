@@ -67,11 +67,31 @@ $(.letterbox) if yes, then reveal
 
 make box bigger if longer word
 
---
-Play the game and record step by step
+make div for letters a lightsaber
 
-Have landing page?? With Star Wars crawl
---
+## Psuedocode
+
+HTML/CSS
+//Create container for guesses left and incorrect guesses
+//Put letters with strikethrough hidden in the incorrect guesses container
+
+Js
+//Make an array of words
+//Randomize those words in a function and put that into a variable
+//Split the word into letters
+//Make those letters hidden
+//Take the letter that the user passes through the input and crossreference to letters in the randomword variable
+//Create if statement: if the letter passed matches a letter in the randomword, then display visible for that word
+// If the letter passed doesn't match a letter in the randomword, then show it as visible inside the incorrect guesses container, along with a strikethrough
+    //Also, decrease one from guesses left number in that container
+//If guesses left number is equal to zero, then alert game over
+// If all letters in the randomword are visible, then alert that game is won
+// Clear the page
+
+## To do later
+
+Add landing page with star wars crawl (see photos)
+Create lightsaber divs for the letters
 
 ## Links and resources 
 

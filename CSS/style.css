@@ -1,6 +1,6 @@
 .intro {
   width: 1400px;
-  height: 300px;
+  height: 100px;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 600%;
   letter-spacing: 6px;
@@ -9,7 +9,6 @@
   font-weight: 800;
 
 }
-
 @keyframes intro {
   0% {
 
@@ -53,8 +52,8 @@ input[type="letter"] {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  height: 120px;
-  width: 1000px;
+  height: 220px;
+  width: 300px;
   padding-left: 20px;
   margin: auto;
   margin-bottom: 20px;
@@ -62,14 +61,29 @@ input[type="letter"] {
 
 .smallbox {
   width: 10%;
-  height: 5%;
-  margin-top: 90px;
-  background-color: #feda4a;
+  height: 40%;
+  margin-top: 120px;
+  border-bottom: 6px solid #feda4a;
+}
+#letterone {
+  font-size: 38px;
+  color: red;
 }
 
+#lettertwo {
+  font-size: 38px;
+  color: red;
+}
 
+#letterthree {
+  font-size: 38px;
+  color: red;
+}
 
-
+#letterfour {
+  font-size: 38px;
+  color: red;
+}
 
 
 

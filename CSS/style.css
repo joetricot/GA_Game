@@ -50,7 +50,7 @@ input[type="letter"] {
 }
 
 
-.mainbox {
+#mainbox {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -61,7 +61,11 @@ input[type="letter"] {
   margin-bottom: 20px;
 }
 
-.smallbox {
+#hideletter {
+  visibility: hidden;
+}
+
+#smallbox {
   width: 10%;
   height: 40%;
   margin-top: 120px;

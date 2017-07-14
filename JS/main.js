@@ -1,56 +1,52 @@
-var words = ["sidious", "plageuis", "lucas", "palpatine", "coruscant", "wookie", "ewoks", "dooku", "padawan", "tatooine"];
+var words = ["sidious", "plagueis", "lucas", "palpatine", "coruscant", "wookie", "ewoks", "dooku", "padawan", "padme", "droid", "sith", "tatooine", "galaxy","kashyyyk", "cantina", "moff", "bacta", "clones", "grievous"];
 
 var randomWord = words[Math.floor(Math.random() * words.length)];
 
 var word = randomWord.toLowerCase().split("");
-// var smallbox = document.getElementById('smallbox');
-var mainbox = document.getElementById('mainbox');
-console.log(mainbox);
 
-//help from gainor
+var mainbox = document.getElementById('mainbox');
+
+var x = document.getElementById("letterinput").value;
+
+window.onload = startGame();
+
+
+//help from gainor bostwick in src
 function startGame () {
   for (var i = 0; i < word.length; i++) {
-    let div1 = document.createElement('div')
-    let div = document.createElement('div')
+    console.log(word[i]);
+    var div1 = document.createElement('div')
+      //creating another div and calling it div1 - to place the actual letter which will be hidden, and have the div with border bottom appear visible to the user
+    var div = document.createElement('div')
+    //creating another div and calling it div - to assign the smallbox css properties
     div.setAttribute('id','smallbox')
-    // div1.setAttribute('id','hideletter')
+    //assigning the div called "div" the css properties of smallbox which has the border bottom property
+    div1.setAttribute('id','hideletter')
+        //assiging the div called "div1" a new css ID to make visibility hidden - after I wrote this, I then added an id in CSS called #hideletter
     div1.innerHTML = word[i];
+    //putting the letters of the word inside the div1, which is the new div we made with visibility hidden
     div.appendChild(div1)
+    //appending that div1 with hidden letter in the div with the border bottom property
     mainbox.appendChild(div)
-
-
-    // div.innerHTML = word[i];
-    // div.setAttribute('class', 'hideletter')
-    // mainbox.appendChild(div);
+    //appending the div, which includes the border bottom and the letter of the word (div1), inside the mainbox div
   }
 }
-startGame();
-
-//make word appear on the mainbox div smallbox
-//have letters in the word === smallbox divs (with border bottom)
-//make word invisible using css visibility
-//create if statement comparing letter in word to the submit output letter:
-  //if the output letter === letter on the divs
-    //then make that letter visible
-  //else:
-    //decrease one from the guessesleft div
-    //add the output letter to the incorrectletters div, with a line-through
-//create gamelost function:
-  //if the guesses left number === 0, then alert game over
-//create gamewon function
-  //if all letters in the mainbox div are visible, then alert game won
-
-
-// function gameStart () {
-//
-// }
 
 function outputname () {
-  var x = document.getElementById("letterinput").value;
-  firstbox = document.getElementById("onesmall")
-  var blah = (firstbox.innerText = x);
-  console.log(blah)
+  for(var i=0;i<word.length;i++){
+    if (x===word[i]){
+      div1.setAttribute('id', 'showletter')
+    }
+  }
 }
+
+
+ // else {
+//badletterid.append(x) and then decrease one from guessesleft
+
+
+
+
 //
 // function checkLetter {
 //   for(let i = 0; i < word.length; i++) {
@@ -70,8 +66,3 @@ function outputname () {
 //     alert ("You're out of guesses! Try again for a new hope.")
 //   }
 // }
-// function input() {
-//     var inputletter = document.getElementById("letterinput").value;
-//     document.getElementsByClassName("submit").innerHTML = x ;
-// }
-// input(word);

@@ -7,7 +7,7 @@ var word = randomWord.toLowerCase().split("");
 var mainbox = document.getElementById('mainbox');
 
 var counter = document.getElementById('number');
-counter.innerText = 5;
+counter.innerText = 7;
 
 
 //
@@ -38,12 +38,10 @@ function startGame () {
   }
 }
 
-
 function outputname () {
   // check if value is in word
   var letterinput = document.getElementById("letterinput").value.toLowerCase();
   var wrongletter = document.getElementById('incorrectletter');
-
   // store all indicies where value is
   let correctWords = [];
   for(let j = 0; j < word.length; ++j){
@@ -51,28 +49,32 @@ function outputname () {
       correctWords.push(j);
     }
   }
-  console.log(correctWords)
   //now we have an array of good indicies
-
   //pull the big box from the dom and show the indicies
   let domLetters = document.getElementsByClassName('smallbox');
   for(let i = 0; i < correctWords.length; ++i){
-    console.log(`showing all ${letterinput}`);
     domLetters[correctWords[i]].children[0].className = 'showletter'
-
   }
   //all letters should be shown
-
   //if no match grow long letter
   if(correctWords.length === 0) {
     wrongletter.append(letterinput);
     //update current incorrect guesses
     counter.innerText--
+    console.log(counter.innerText)
     //post current incorrect guesses
-
+    gameLost();
   }
-
 }
+
+function gameLost () {
+  if (counter.innerText == 0) {
+    alert("Game lost!");
+  }
+}
+
+
+  //This code also works
   //if the letter input is correct,
   // console.log the array
   // var hideletter = document.getElementsByClassName('hideletter');
@@ -82,13 +84,8 @@ function outputname () {
   // for(var i=0;i<hideletter.length;i++){
   //   if (letterinput===hideletter[i].innerHTML){
   //     hideletter[i].setAttribute('class', 'showletter')
-  //   } else {
-  //     wrongletter.append(letterinput)
-  //     // let incorrectguesses = document.getElementsByClassName('incorrectguesses')
-  //     // incorrectguesses.append(wrongletter);
-  //     // counter.innerText -- ;
-  //     // badletter.append(letterinput);
   //   }
+  //
 
 
 
@@ -96,7 +93,7 @@ function outputname () {
 
 
  // else {
-//badletterid.append(x) and then decrease one from guessesleft
+//id.append(x) and then decrease one from guessesleft
 
 
 

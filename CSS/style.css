@@ -7,7 +7,7 @@ h1 {
   color: #feda4a;
   font-weight: 800;
   margin: auto;
-  animation: bounceInLeft 3s
+  animation: bounceInLeft 5s
 }
 
 @keyframes bounceInLeft {
@@ -43,7 +43,7 @@ h1 {
 }
 
 img {
-  animation: bounceInRight 3s;
+  animation: bounceInRight 5s;
 }
 
 @keyframes bounceInRight {
@@ -107,7 +107,7 @@ input[type="letter"] {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  height: 220px;
+  height: 160px;
   width: 300px;
   padding-left: 20px;
   margin: auto;
@@ -146,28 +146,9 @@ input[type="letter"] {
 
 .smallbox {
   width: 10%;
-  height: 20%;
+  height: 30%;
   margin-top: 120px;
   border-bottom: 6px solid #feda4a;
-}
-#letterone {
-  font-size: 38px;
-  color: red;
-}
-
-#lettertwo {
-  font-size: 38px;
-  color: red;
-}
-
-#letterthree {
-  font-size: 38px;
-  color: red;
-}
-
-#letterfour {
-  font-size: 38px;
-  color: red;
 }
 
 
@@ -186,6 +167,8 @@ input[type="letter"] {
   filter: alpha(opacity=60);
   font-size: 20px;
   text-align: center;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: bold;
 }
 .incorrectguesses {
   display: flex;
@@ -200,6 +183,8 @@ input[type="letter"] {
   filter: alpha(opacity=60);
   font-size: 20px;
   text-align: center;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: bold;
 }
 
 #incorrect {
@@ -211,7 +196,11 @@ input[type="letter"] {
   text-decoration: line-through;
 }
 
+.a {
+  color: blue;
+}
 footer {
+  font-family: 'Pathway Gothic One', sans-serif;
   color: #feda4a;
   float: right;
   font-size: 15px;

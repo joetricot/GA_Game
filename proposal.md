@@ -94,8 +94,12 @@ Js
 
 //clear the page
 
+//create vairable for length of the word chosen - each time a letter is visible, decrease one from the total count
+
 ## To do later
 
+//you already guesses that letter, try again
+//add restart button
 Add landing page with star wars crawl (see photos)
 Create lightsaber divs for the letters
 Add noooo sounds with sound on/off effects

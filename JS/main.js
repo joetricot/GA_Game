@@ -5,8 +5,11 @@ var randomWord = words[Math.floor(Math.random() * words.length)];
 var word = randomWord.toLowerCase().split("");
 
 var mainbox = document.getElementById('mainbox');
-var gleft = document.getElementById('number');
-gleft.innerHTML = "5"
+
+var counter = document.getElementById('number');
+counter.innerText = 5;
+
+
 //
 // let default = document.getElementById("number");
 // default.innerHTML = 5;
@@ -14,7 +17,7 @@ gleft.innerHTML = "5"
 window.onload = startGame();
 
 function startGame () {
-  console.log(mainbox);
+
 
   for (var i = 0; i < word.length; i++) {
     console.log(word[i]);
@@ -36,21 +39,59 @@ function startGame () {
 }
 
 
-
 function outputname () {
-  var letterinput = document.getElementById("letterinput").value;
-  var hideletter = document.getElementsByClassName('hideletter');
-  var badletter = document.getElementById('incorrectletter');
-  var gleft = document.getElementById('number');
-  gleft.innerHTML = "5"
-  for(var i=0;i<hideletter.length;i++){
-    if (letterinput===hideletter[i].innerHTML){
-      hideletter[i].setAttribute('class', 'showletter')
-    }  else {
-      badletter.append(letterinput);
+  // check if value is in word
+  var letterinput = document.getElementById("letterinput").value.toLowerCase();
+  var wrongletter = document.getElementById('incorrectletter');
+
+  // store all indicies where value is
+  let correctWords = [];
+  for(let j = 0; j < word.length; ++j){
+    if(word[j] === letterinput){
+      correctWords.push(j);
     }
   }
+  console.log(correctWords)
+  //now we have an array of good indicies
+
+  //pull the big box from the dom and show the indicies
+  let domLetters = document.getElementsByClassName('smallbox');
+  for(let i = 0; i < correctWords.length; ++i){
+    console.log(`showing all ${letterinput}`);
+    domLetters[correctWords[i]].children[0].className = 'showletter'
+
+  }
+  //all letters should be shown
+
+  //if no match grow long letter
+  if(correctWords.length === 0) {
+    wrongletter.append(letterinput);
+    //update current incorrect guesses
+    counter.innerText--
+    //post current incorrect guesses
+
+  }
+
 }
+  //if the letter input is correct,
+  // console.log the array
+  // var hideletter = document.getElementsByClassName('hideletter');
+  //
+  // var gleft = document.getElementById('number');
+  // gleft.innerHTML = "5"
+  // for(var i=0;i<hideletter.length;i++){
+  //   if (letterinput===hideletter[i].innerHTML){
+  //     hideletter[i].setAttribute('class', 'showletter')
+  //   } else {
+  //     wrongletter.append(letterinput)
+  //     // let incorrectguesses = document.getElementsByClassName('incorrectguesses')
+  //     // incorrectguesses.append(wrongletter);
+  //     // counter.innerText -- ;
+  //     // badletter.append(letterinput);
+  //   }
+
+
+
 
 
 

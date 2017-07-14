@@ -26,7 +26,7 @@
 }
 
 body {
-  background-image: url("../assets/starfield.jpg");
+  /*background-image: url("../assets/starfield.jpg");*/
   text-align: center;
 }
 
@@ -62,14 +62,14 @@ input[type="letter"] {
   color: red;
 }
 
-#hideletter {
+.hideletter {
   visibility: hidden;
 }
-#showletter {
+.showletter {
   visibility: visible;
 }
 
-#smallbox {
+.smallbox {
   width: 10%;
   height: 25%;
   margin-top: 120px;
@@ -131,7 +131,7 @@ input[type="letter"] {
   color: red;
 
 }
-#incorrectletter {
+/*#incorrectletter {
   color: red;
   text-decoration: line-through;
-}
+}*/

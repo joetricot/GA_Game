@@ -98,6 +98,8 @@ Js
 
 Add landing page with star wars crawl (see photos)
 Create lightsaber divs for the letters
+Add noooo sounds with sound on/off effects
+Add local storage to detect what words the person did and not include them
 
 ## Links and resources
 

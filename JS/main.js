@@ -1,4 +1,4 @@
-var words = ["sidious", "plagueis", "lucas", "palpatine", "coruscant", "wookie", "ewoks", "dooku", "padawan", "padme", "droid", "sith", "tatooine", "galaxy","kashyyyk", "cantina", "moff", "bacta", "clones", "grievous"];
+var words = ["sidious", "plagueis", "lucas", "palpatine", "coruscant", "wookie", "ewoks", "dooku", "padawan", "padme", "droid", "sith", "tatooine", "galaxy","kashyyyk", "cantina", "moff", "clones", "grievous"];
 
 var randomWord = words[Math.floor(Math.random() * words.length)];
 
@@ -9,18 +9,17 @@ var mainbox = document.getElementById('mainbox');
 var counter = document.getElementById('number');
 counter.innerText = 7;
 
-
 //
 // let default = document.getElementById("number");
 // default.innerHTML = 5;
 
 window.onload = startGame();
 
+
 function startGame () {
 
-
   for (var i = 0; i < word.length; i++) {
-    // console.log(word[i]);
+    console.log(word[i]);
     var div1 = document.createElement('div')
       //creating another div and calling it div1 - to place the actual letter which will be hidden, and have the div with border bottom appear visible to the user
     var div = document.createElement('div')
@@ -62,9 +61,10 @@ function outputname () {
     //update current incorrect guesses
     counter.innerText--
     //post current incorrect guesses
-    gameWon();
-    gameLost();
   }
+  gameWon();
+  gameLost();
+  document.getElementById('letterinput').value = '';
 }
 
 function gameLost () {
@@ -83,15 +83,12 @@ function gameLost () {
 // }
 
 function gameWon () {
-let correctWords = [];
-for(let j = 0; j < word.length; ++j){
-  if(word[j] === letterinput){
-    correctWords.push(j);
+  if(document.getElementsByClassName('hideletter').length == 0){
+    alert('You won!')
+    location.reload()
   }
-  if (correctWords === 'visible')
-    alert('game won')
 }
-}
+
 
   //This code also works
   //if the letter input is correct,

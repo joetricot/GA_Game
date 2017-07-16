@@ -1,6 +1,6 @@
 # Star Wars Hangman
 
-![./assets/screenshot.png]
+![game screenshot](./assets/screenshot.png)
 
 ## What is Hangman?
 

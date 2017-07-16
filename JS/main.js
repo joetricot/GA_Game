@@ -20,7 +20,7 @@ function startGame () {
 
 
   for (var i = 0; i < word.length; i++) {
-    console.log(word[i]);
+    // console.log(word[i]);
     var div1 = document.createElement('div')
       //creating another div and calling it div1 - to place the actual letter which will be hidden, and have the div with border bottom appear visible to the user
     var div = document.createElement('div')
@@ -49,7 +49,7 @@ function outputname () {
       correctWords.push(j);
     }
   }
-  //now we have an array of good indicies
+  //now we have an array of good letter inputs that match the letters in the word
   //pull the big box from the dom and show the indicies
   let domLetters = document.getElementsByClassName('smallbox');
   for(let i = 0; i < correctWords.length; ++i){
@@ -61,8 +61,8 @@ function outputname () {
     wrongletter.append(letterinput);
     //update current incorrect guesses
     counter.innerText--
-    console.log(counter.innerText)
     //post current incorrect guesses
+    gameWon();
     gameLost();
   }
 }
@@ -70,9 +70,28 @@ function outputname () {
 function gameLost () {
   if (counter.innerText == 0) {
     alert("Game lost!");
+    location.reload()
   }
 }
+// function gameWon () {
+//   for (var i = 0; i < word.length; i++) {
+//     if (word.length === visible) {
+//       alert("game won!")
+//     }
+//     console.log(word);
+// }
+// }
 
+function gameWon () {
+let correctWords = [];
+for(let j = 0; j < word.length; ++j){
+  if(word[j] === letterinput){
+    correctWords.push(j);
+  }
+  if (correctWords === 'visible')
+    alert('game won')
+}
+}
 
   //This code also works
   //if the letter input is correct,
@@ -86,34 +105,3 @@ function gameLost () {
   //     hideletter[i].setAttribute('class', 'showletter')
   //   }
   //
-
-
-
-
-
-
- // else {
-//id.append(x) and then decrease one from guessesleft
-
-
-
-
-//
-// function checkLetter {
-//   for(let i = 0; i < word.length; i++) {
-//     if word[i] === x {
-//       //make that letter visible
-//     } else {
-//       //return that letter into incorrect letter guesses div
-//       return document.getElementsByClassName('incorrectguesses').innerText(word[i]);
-//     }
-//   }
-// }
-
-// function gameOver(win) {
-//   if (win) {
-//     alert ("Congratulations! You've done well, Lord Vader...")
-//   } else {
-//     alert ("You're out of guesses! Try again for a new hope.")
-//   }
-// }

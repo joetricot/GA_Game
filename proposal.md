@@ -19,7 +19,7 @@ The page will have a background of black with stars and the top of the page will
 "Star Wars Hangman" in the classic Star Wars font.
 I will have to create an array of words and have those words chosen at random to be placed on the board.
 The words must remain hidden, only to be shown upon an entrey by the user of the appropiate letter.
-With every letter entry that does not equal to a letter in the word, that letter will appear with a strikethrough near "wrong guesses". The number one will also be decreased from the default number of 5 near "guesses left".
+With every letter entry that does not equal to a letter in the word, that letter will appear with a strikethrough near "wrong guesses". The number one will also be decreased from the default number of 9 near "guesses left".
 Upon completion of the entire word, an alert will appear signfying a win.
 Upon the "guesses left" hitting 0, an alert will appear signifying a loss/
 
@@ -65,9 +65,7 @@ $(.letterbox) if yes, then reveal
 
 (win condition invisible - game board disappears...)
 
-make box bigger if longer word
 
-make div for letters a lightsaber
 
 ## Psuedocode
 

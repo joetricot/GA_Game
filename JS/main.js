@@ -7,7 +7,7 @@ var word = randomWord.toLowerCase().split("");
 var mainbox = document.getElementById('mainbox');
 
 var counter = document.getElementById('number');
-counter.innerText = 7;
+counter.innerText = 9;
 
 //
 // let default = document.getElementById("number");
@@ -64,27 +64,21 @@ function outputname () {
   }
   gameWon();
   gameLost();
+  //to reset the input box
   document.getElementById('letterinput').value = '';
+
 }
 
 function gameLost () {
   if (counter.innerText == 0) {
-    alert("Game lost!");
+    alert("You've lost, try again!");
     location.reload()
   }
 }
-// function gameWon () {
-//   for (var i = 0; i < word.length; i++) {
-//     if (word.length === visible) {
-//       alert("game won!")
-//     }
-//     console.log(word);
-// }
-// }
 
 function gameWon () {
   if(document.getElementsByClassName('hideletter').length == 0){
-    alert('You won!')
+    alert('You are correct!')
     location.reload()
   }
 }
